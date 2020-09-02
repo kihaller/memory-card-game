@@ -1,0 +1,62 @@
+.hidden {
+  display: none;
+}
+
+
+
+.memory-cards {
+  background-color: transparent;
+  perspective: 1000px;
+  height: auto;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner,
+.flip-card-front,
+.flip-card-back {
+  border-radius: 20px;
+
+  img {
+    border-radius: 20px;
+    width: 100%;
+  }
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 0;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  padding-bottom: 100%;
+
+  box-shadow: 3px 3px 10px 5px black;
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgb(10, 255, 212);
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
