@@ -79,6 +79,7 @@ function compareCards(flippedCards) {
     //let them open if they match and add them to array of matched cards
     matchedCards.push(flippedCards[0]);
     matchedCards.push(flippedCards[1]);
+
     //close them if they do not match and enable them again
   } else {
     // Pause a little to allow the user to look at the cards
