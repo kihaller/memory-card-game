@@ -4,11 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://www.freepik.com/vectors/icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Memory Card Game</title>
   </head>
   <body>
+    <div id="overlay" class="hidden">
+      <h2>Congratulations! You've won 🎉</h2>
+      <h3>Number of tries you needed:</h3>
+      <h3 class="score" id="score"></h3>
+      <a id="btn-reset" class="btn-reset">Play again</a>
+    </div>
     <div class="grid-container" id="grid-container"></div>
+    <div class="tries">
+      Tries:
+      <p id="tries-counter" class="tries-counter">0</p>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

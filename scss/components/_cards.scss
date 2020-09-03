@@ -49,6 +49,13 @@
   transform: rotateY(180deg);
 }
 
+
+
+.disabled {
+  pointer-events: none;
+
+}
+
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: rgb(10, 255, 212);

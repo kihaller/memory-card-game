@@ -1,0 +1,29 @@
+.overlay {
+  display: block;
+  font-size: 32px;
+  flex-direction: column;
+  position: fixed;
+  color: #FFFFFF;
+  background-color: rgb(255, 181, 181);
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.btn-reset {
+  padding: 8px;
+  margin: 50px auto;
+  color: white;
+  border: white 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-reset:hover {
+  transform: scale(1.2);
+  background-color: #0affd4;
+}
