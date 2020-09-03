@@ -2,7 +2,7 @@
 
 This game is designed to test a user's memory. There is a deck of 18 cards, with 9 pairs of matching cards each.
 
-![Screen Shot 2020-09-03 at 3.09.33 PM](./docs/Screen Shot 2020-09-03 at 3.09.33 PM.png)
+![Screen Shot 2020-09-03 at 3.09.33 PM](./docs/screenshot.jpg)
 
 ## Instructions
 
