@@ -74,11 +74,12 @@ function flipCardBack(card) {
   innerDiv.classList.remove("flip");
 }
 
-function compareCards(flippedCards) {
+function compareCards() {
   if (flippedCards[0].id === flippedCards[1].id) {
     //let them open if they match and add them to array of matched cards
     matchedCards.push(flippedCards[0]);
     matchedCards.push(flippedCards[1]);
+    flippedCards = [];
 
     //close them if they do not match and enable them again
   } else {
@@ -86,6 +87,7 @@ function compareCards(flippedCards) {
     setTimeout(() => {
       flipCardBack(flippedCards[0]);
       flipCardBack(flippedCards[1]);
+      flippedCards = [];
     }, 1500);
   }
 }
@@ -108,7 +110,7 @@ function reset() {
 
 // This is the main orchestrator --> defines what needs to be done when card is flipped
 function onCardClick(card) {
-  if (!card.disabled) {
+  if (!card.disabled && flippedCards.length < 2) {
     //flip the card
     flipCard(card);
 
@@ -119,8 +121,7 @@ function onCardClick(card) {
     if (flippedCards.length === 2) {
       counter++;
       tries.innerHTML = counter;
-      compareCards(flippedCards);
-      flippedCards = [];
+      compareCards();
     }
 
     // Are all cards matched?
