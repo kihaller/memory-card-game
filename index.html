@@ -12,10 +12,21 @@
     <title>Memory Card Game</title>
   </head>
   <body>
+    <div class="alert hidden" id="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';"
+        >&times;</span
+      >
+      <span
+        >This game works best on tablet and laptop screens. Consider switching
+        to a larger screen before you start playing.</span
+      >
+    </div>
     <div id="overlay" class="hidden">
-      <h2>Congratulations! You've won 🎉</h2>
-      <h3>Number of tries you needed:</h3>
-      <h3 class="score" id="score"></h3>
+      <h2 id="overlay-message"></h2>
+      <h3>Your score:</h3>
+      <h2 class="score" id="score"></h2>
+      <h3>Highscore:</h3>
+      <h2 class="highscore" id="highscore-overlay"></h2>
       <a id="btn-reset" class="btn-reset">Play again</a>
     </div>
     <div class="grid-container" id="grid-container"></div>
@@ -23,6 +34,11 @@
       Tries:
       <p id="tries-counter" class="tries-counter">0</p>
     </div>
-    <script src="js/main.js"></script>
+    <div class="highscore-container">
+      Highscore:
+      <p id="highscore-counter" class="highscore-counter">&infin;</p>
+    </div>
+    <script type="module" src="js/main.js"></script>
+    <!-- <script type="module" src="js/localstorage.js"></script> -->
   </body>
 </html>

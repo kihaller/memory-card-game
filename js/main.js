@@ -1,3 +1,5 @@
+import { loadHighScoreFromStorage, checkHighScore } from "./localstorage.js";
+
 /* -------------
 Global Variables
 ------------- */
@@ -102,8 +104,10 @@ function reset() {
   matchedCards = [];
   flippedCards = [];
   counter = 0;
-  tries.innerHTML = "";
-  for (card of cards) {
+  tries.innerHTML = 0;
+  loadHighScoreFromStorage();
+
+  for (let card of cards) {
     flipCardBack(card);
   }
 }
@@ -126,6 +130,7 @@ function onCardClick(card) {
 
     // Are all cards matched?
     if (matchedCards.length === 18) {
+      checkHighScore(counter);
       //Game is done, show overlay
       setTimeout(isFinished, 1500);
     }
@@ -135,13 +140,33 @@ function onCardClick(card) {
 /* ------------
 Execute on load
 ------------ */
-shuffle(animals);
-animals.map((animal) => createCard(animal));
+window.onload = function () {
+  popup(smallScreen); // Call listener function at run time
 
-// Define what happens when user clicks on card:
-for (let card of cards) {
-  card.addEventListener("click", () => onCardClick(card));
+  shuffle(animals);
+  animals.map((animal) => createCard(animal));
+
+  // Load highScore
+  loadHighScoreFromStorage();
+
+  // Define what happens when user clicks on card:
+  for (let card of cards) {
+    card.addEventListener("click", () => onCardClick(card));
+  }
+
+  // reset game
+  resetButton.addEventListener("click", () => reset());
+};
+
+/* ------------
+Popup on small screens
+------------ */
+function popup(smallScreen) {
+  if (smallScreen.matches) {
+    // If media query matches
+    document.getElementById("alert").style.display = "block";
+  }
 }
 
-// reset game
-resetButton.addEventListener("click", () => reset());
+let smallScreen = window.matchMedia("(max-width: 1023px)");
+smallScreen.addListener(popup); // Attach listener function on state changes

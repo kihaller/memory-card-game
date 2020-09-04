@@ -3,7 +3,7 @@
   font-size: 32px;
   position: fixed;
   color: #FFFFFF;
-  background-color: rgb(255, 181, 181);
+  background-color: $accent-color1;
   text-align: center;
   top: 0;
   bottom: 0;
@@ -11,12 +11,13 @@
   right: 0;
   border-radius: 5px;
   z-index: 1;
-  padding-top: 20%;
+
 }
 
 .btn-reset {
-  padding: 8px;
-  margin: 50px auto;
+  display: inline-block;
+  margin: 40px auto;
+  padding: 10px;
   color: white;
   border: white 2px solid;
   border-radius: 5px;
@@ -25,5 +26,5 @@
 
 .btn-reset:hover {
   transform: scale(1.2);
-  background-color: #0affd4;
+  background-color: $accent-color2;
 }

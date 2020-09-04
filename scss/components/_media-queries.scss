@@ -4,3 +4,20 @@
   }
 
 }
+
+@media (max-width: 767px) {
+
+  .tries,
+  .highscore {
+    float: left;
+    margin-left: 23%;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .closebtn {
+    line-height: 10px;
+  }
+
+}
