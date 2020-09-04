@@ -21,3 +21,9 @@
   }
 
 }
+
+@media (max-aspect-ratio: 44/30) {
+  .grid-container {
+    width: 100%;
+  }
+}

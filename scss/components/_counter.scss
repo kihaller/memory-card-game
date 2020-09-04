@@ -2,11 +2,12 @@
   color: $accent-color1;
   background-color: white;
   font-weight: bolder;
-  font-size: 2.5em;
+  font-size: 2rem;
   border: solid $accent-color1 10px;
   padding-top: 20px;
-  float: left;
-  margin-left: 10%;
+  // float: left;
+  margin-left: auto;
+  margin-right: 10%;
   text-align: center;
   width: 20%;
   min-width: 220px;
@@ -16,7 +17,13 @@
 .highscore-container {
   @extend .tries;
   color: $accent-color2;
-  float: right;
-  margin-right: 10%;
+  // float: right;
+  margin-left: 10%;
+  margin-right: auto;
   border: solid 10px $accent-color2;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
 }
