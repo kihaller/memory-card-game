@@ -1,4 +1,7 @@
 .alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px;
   font-size: .8em;
   color: #FFF;
@@ -13,11 +16,10 @@
 
 /* The close button */
 .closebtn {
+  margin: 5px;
   color: #FFF;
   font-weight: bold;
-  float: right;
   font-size: 15px;
-  line-height: 30px;
   cursor: pointer;
   transition: 1s;
 

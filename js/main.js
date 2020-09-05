@@ -164,7 +164,9 @@ Popup on small screens
 function popup(smallScreen) {
   if (smallScreen.matches) {
     // If media query matches
-    document.getElementById("alert").style.display = "block";
+    document.getElementById("alert").style.display = "flex";
+  } else {
+    document.getElementById("alert").style.display = "none";
   }
 }
 

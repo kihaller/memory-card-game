@@ -7,10 +7,14 @@
 
 @media (max-width: 767px) {
 
+  .stats {
+    flex-direction: column;
+  }
+
   .tries,
-  .highscore {
-    float: left;
-    margin-left: 23%;
+  .highscore-container {
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
